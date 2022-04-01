@@ -1,0 +1,7 @@
+False
+100
+100
+0
+False
+False
+5
