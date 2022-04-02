@@ -50,10 +50,12 @@ To enhance the project, we can add a force sensor underneath the hive. We can al
 -	python setup.py install
 •	PySerial library download : pip install pyserial
 •	CRON settings : crontab -e
-* * * * * <program directory> && <Python interpreter directory> <program>
+*/1 */1 */1 */1 */1 <program directory> && <Python interpreter directory> <program>
 @reboot <program directory> && <Python interpreter directory> <startup program>
   
-  
+When a swarming occurs, the system send a SMS to the beekeeper.
+You can also send a SMS to the system with the several commands :
+  - 
   
 
   
