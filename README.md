@@ -26,7 +26,9 @@ To carry out this project we use several components, here is a list :
   - Thermo-Hygrometer (we use HTU21)
   - Waveshare GSM/GPRS/GNSS/Bluetooth HAT for Raspberry Pi
   - Some wires
-(The wiring will soon be publish)
+
+To wire the system you need to follow the document "cablage.png".
+The you need to wire the sound sensor to the Channel 0 of the ADC and the potentiometers to the channels 1 and 2.
 
 We use a Raspberry Pi Zero W because it has less power consumption than the others Raspberry.
 However the Pi Zero does not have analog inputs with an integreted ADC that is why we have the MCP3008.
@@ -111,8 +113,10 @@ Pour mener à bien ce projet, nous avons utilisés différents composants, en vo
   - Capteur de température et d'hygrométrie (HTU21)
   - Waveshare GSM/GPRS/GNSS/Bluetooth HAT pour Raspberry Pi
   - Des fils
-(Le câblage sera publié prochainement)
 
+  To wire the system you need to follow the document "cablage.png".
+The you need to wire the sound sensor to the Channel 0 of the ADC and the potentiometers to the channels 1 and 2.
+  
 Nous utilisons un Raspberry Pi Zero W parce que sa consommation électrique est moindre par rapport aux autres Rapsberry.
 Cependant, la Pi Zero n'a pas d'entrée analogique avec un CAN intégré, c'est pourquoi nous utilisons un MCP3008.
 Le MCP3008 est utilisé pour convertir les signaux analogiques venants des potentiomètres et du capteur de son.
