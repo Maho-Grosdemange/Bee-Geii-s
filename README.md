@@ -50,12 +50,43 @@ To enhance the project, we can add a force sensor underneath the hive. We can al
 -	python setup.py install
 •	PySerial library download : pip install pyserial
 •	CRON settings : crontab -e
-*/1 */1 */1 */1 */1 <program directory> && <Python interpreter directory> <program>
+  */1 */1 */1 */1 */1 <program directory> && <Python interpreter directory> <program>
 @reboot <program directory> && <Python interpreter directory> <startup program>
   
 When a swarming occurs, the system send a SMS to the beekeeper.
 You can also send a SMS to the system with the several commands :
-  - 
+  
+  !lire_temperature               :   send the temperature
+    
+    !lire_humidite                  :   send back the humidity
+    
+    !lire_son                       :   send back sound value
+    
+    !lire_date ou !lire_heure       :   send back date and hour
+    
+    !lire_seuils                    :   send back of the thresholds
+    
+    !modif_seuils <seuilb> <seuilh> :   change the thresholds with the values in the SMS.
+                                        This command execute the !bloquer_seuils command.
+                                        
+    !bloquer_seuils                 :   lock the thresholds.
+                                        The program will no longer read the potentiometers values.
+                                        
+    !debloquer_seuils               :   unlock the thresholds.
+                                        The program will read the potentiometers values.
+                                        
+    !lire_numeros                   :   send back the list of numbers to which the system should send a SMS when a swarming occurs (phonebook.txt).
+    
+    !ajouter_numero <numero>        :   add the number into the numbers list (phonebook.txt).
+                                        Send back the number if it has been add or a message to say the number is already in the list.
+                                
+    !retirer_numero <numero>        :   remove the number into the numbers list (phonebook.txt).
+                                        Send back the number if it has been remove or a message to say the number is not in the list.
+
+    !lire_temps                     :   send back the monostable threshold value.
+
+    !modif_temps <valeur>           :   change the monostable threshold value.
+                                        Send back the modify value.
   
 
   
@@ -104,6 +135,41 @@ Pour améliorer le projet, nous pouvons ajouter un capteur de force en dessous d
 -	python setup.py install
 •	Téléchargement de la bibliothèque Serial : pip install pyserial
 •	Réglage du CRON : crontab -e
-* * * * * <répertoire du programme> && <répertoire de l’interpréteur Python> <programme>
+  */1 */1 */1 */1 */1 <répertoire du programme> && <répertoire de l’interpréteur Python> <programme>
 @reboot <répertoire du programme> && <répertoire de l’interpréteur Python> <programme>
 
+Lorsqu'un essaimage a lieu, le système doit envoyer un SMS a l'apiculteur.
+  Vous pouvez également envoyer un SMS au système avec les commandes suivantes :
+  
+  !lire_temperature               :   envoi de la temperature
+    
+    !lire_humidite                  :   envoi de l'humidite
+    
+    !lire_son                       :   envoi de la valeur du son
+    
+    !lire_date ou !lire_heure       :   envoi de la date et heure du module
+    
+    !lire_seuils                    :   envoi des seuils (seuilh et seuilb de l'hysteresis) du systeme
+    
+    !modif_seuils <seuilb> <seuilh> :   change les seuils avec les valeurs passees en parametre dans le sms (valeurs en %).
+                                        Cette commande execute en meme temps !bloquer_seuils
+                                        
+    !bloquer_seuils                 :   bloque les seuils.
+                                        Le programme n'ira plus lire la valeur des potentiometres mais lira les valeurs stockes dans le fichier param.txt
+                                        
+    !debloquer_seuils               :   debloque les seuils.
+                                        Le programme ira lire la valeur des potentiometres
+                                        
+    !lire_numeros                   :   envoi de la liste des numeros auxquels envoyer un message en cas d'essaimage (liste contenue dans phonebook.txt)
+    
+    !ajouter_numero <numero>        :   ajoute le numero passe en parametre par sms a la liste des numeros contenue dans phonebook.txt.
+                                        Envoi le numero si le numero a ete ajoute, Numero deja dans la liste si le numero est deja dans la liste
+                                
+    !retirer_numero <numero>        :   retire le numero passe en parametre par sms de la liste des numeros contenue dans phonebook.txt
+                                        Envoi le numero si le numero a ete retire, Numero non present dans la liste si le numero n'etait pas dans la liste
+
+    !lire_temps                     :   envoi de la valeur du seuil de temps du monostable
+
+    !modif_temps <valeur>           :   change le seuil de temps du monostable.
+                                        Envoi la valeur modifiee
+  
