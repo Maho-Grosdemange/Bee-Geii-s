@@ -39,19 +39,19 @@ To enhance the project, we can add a force sensor underneath the hive. We can al
 
 --- How to install and run the project ---
 
-•	Install Raspbian on the Raspberry and do the startup config
-•	SSH activation : sudo raspi-config -> Interface Options -> SSH -> <Yes> -> <Ok>
-•	SPI activation : sudo raspi-config -> Interface Options -> SPI -> <Yes> -> <Ok>
-•	I2C activation : sudo raspi-config -> Interface Options -> I2C -> <Yes> -> <Ok>
-•	Serial Port activation : sudo raspi-config -> Interface Options -> Serial Port -> <Yes> -> <Ok>
-•	MCP3008 library download : sudo pip install adafruit-mcp3008
-•	I2C library download : 
--	pip install smbus-cffi
--	pip install git+https://github.com/bivab/smbus-cffi.git
--	git clone https://github.com/bivab/smbus-cffi.git
--	python setup.py install
-•	PySerial library download : pip install pyserial
-•	CRON settings : crontab -e
+- Install Raspbian on the Raspberry and do the startup config
+- SSH activation : sudo raspi-config -> Interface Options -> SSH -> Yes -> Ok
+-	SPI activation : sudo raspi-config -> Interface Options -> SPI -> Yes -> Ok
+-	I2C activation : sudo raspi-config -> Interface Options -> I2C -> Yes -> Ok
+-	Serial Port activation : sudo raspi-config -> Interface Options -> Serial Port -> Yes -> Ok
+-	MCP3008 library download : sudo pip install adafruit-mcp3008
+-	I2C library download : 
+      -	pip install smbus-cffi
+      -	pip install git+https://github.com/bivab/smbus-cffi.git
+      -	git clone https://github.com/bivab/smbus-cffi.git
+      -	python setup.py install
+-	PySerial library download : pip install pyserial
+-	CRON settings : crontab -e
   */1 */1 */1 */1 */1 <program directory> && <Python interpreter directory> <program>
 @reboot <program directory> && <Python interpreter directory> <startup program>
   
@@ -126,19 +126,19 @@ Pour améliorer le projet, nous pouvons ajouter un capteur de force en dessous d
 
 --- How to install and run the project ---
 
-•	Installation de Raspbian sur la carte et faire la configuration de démarrage
-•	Activation du SSH : sudo raspi-config -> Interface Options -> SSH -> <Oui> -> <Ok>
-•	Activation du SPI : sudo raspi-config -> Interface Options -> SPI -> <Oui> -> <Ok>
-•	Activation de l’I2C : sudo raspi-config -> Interface Options -> I2C -> <Oui> -> <Ok>
-•	Activation du Serial Port : sudo raspi-config -> Interface Options -> Serial Port -> <Oui> -> <Ok>
-•	Téléchargement de la bibliothèque MCP3008 : sudo pip install adafruit-mcp3008
-•	Téléchargement de la bibliothèque I2C : 
--	pip install smbus-cffi
--	pip install git+https://github.com/bivab/smbus-cffi.git
--	git clone https://github.com/bivab/smbus-cffi.git
--	python setup.py install
-•	Téléchargement de la bibliothèque Serial : pip install pyserial
-•	Réglage du CRON : crontab -e
+-	Installation de Raspbian sur la carte et faire la configuration de démarrage
+-	Activation du SSH : sudo raspi-config -> Interface Options -> SSH -> Oui -> Ok
+-	Activation du SPI : sudo raspi-config -> Interface Options -> SPI -> Oui -> Ok
+-	Activation de l’I2C : sudo raspi-config -> Interface Options -> I2C -> Oui -> Ok
+-	Activation du Serial Port : sudo raspi-config -> Interface Options -> Serial Port -> Oui -> Ok
+-	Téléchargement de la bibliothèque MCP3008 : sudo pip install adafruit-mcp3008
+-	Téléchargement de la bibliothèque I2C : 
+      -	pip install smbus-cffi
+      -	pip install git+https://github.com/bivab/smbus-cffi.git
+      -	git clone https://github.com/bivab/smbus-cffi.git
+      -	python setup.py install
+-	Téléchargement de la bibliothèque Serial : pip install pyserial
+-	Réglage du CRON : crontab -e
   */1 */1 */1 */1 */1 <répertoire du programme> && <répertoire de l’interpréteur Python> <programme>
 @reboot <répertoire du programme> && <répertoire de l’interpréteur Python> <programme>
 
