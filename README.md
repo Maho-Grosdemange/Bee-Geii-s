@@ -58,7 +58,7 @@ To enhance the project, we can add a force sensor underneath the hive. We can al
 When a swarming occurs, the system send a SMS to the beekeeper.
 You can also send a SMS to the system with the several commands :
   
-  !lire_temperature               :   send the temperature
+    !lire_temperature               :   send the temperature
     
     !lire_humidite                  :   send back the humidity
     
@@ -145,7 +145,7 @@ Pour améliorer le projet, nous pouvons ajouter un capteur de force en dessous d
 Lorsqu'un essaimage a lieu, le système doit envoyer un SMS a l'apiculteur.
   Vous pouvez également envoyer un SMS au système avec les commandes suivantes :
   
-  !lire_temperature               :   envoi de la temperature
+    !lire_temperature               :   envoi de la temperature
     
     !lire_humidite                  :   envoi de l'humidite
     
